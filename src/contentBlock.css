@@ -13,6 +13,7 @@
 
 .overflow {
   overflow-x: scroll;
+  max-width: 1000px;
 }
 
 .title {
@@ -20,6 +21,6 @@
 }
 
 .card-image {
-  width: 350px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
 }

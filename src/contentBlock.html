@@ -1,12 +1,12 @@
 <template>
-  <div class="slds-grid slds-box slds-wrap spacing-bottom">
+  <div class="slds-grid slds-wrap spacing-bottom">
     <div class="slds-col small-spacing-bottom slds-size_1-of-1 title">
       <h1>{title}</h1>
     </div>
-    <div class="slds-col slds-size_1-of-12">
+    <div class="slds-col slds-grid slds-grid_align-center slds-size_1-of-12">
       <button onclick={handleLeftClick}>a</button>
     </div>
-    <div class="slds-col slds-box slds-grid overflow slds-size_10-of-12 container">
+    <div class="slds-col slds-grid overflow slds-size_10-of-12 container">
       <template for:each={gamerList} for:item="game">
         <article key={game.name} class="slds-card slds-size_1-of-4 content-spacing">
           <div class="slds-card__header slds-grid slds-assistive-text">
@@ -24,15 +24,15 @@
             <img class="card-image" src={game.background_image}>
           </div>
           <footer class="slds-card__footer">
-            <a class="slds-card__footer-action" href="#">View All
+            <a class="slds-card__footer-action" href="#">Price: $15.99
               <span class="slds-assistive-text">Accounts</span>
             </a>
           </footer>
         </article>
       </template>
     </div>
-    <div class="slds-col slds-size_1-of-12">
-      <button>b</button>
+    <div class="slds-col slds-grid slds-grid_align-center slds-size_1-of-12">
+      <button onclick={handleRightClick}>b</button>
     </div>
   </div>
 </template>
