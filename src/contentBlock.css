@@ -1,0 +1,25 @@
+.content-spacing {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.spacing-bottom {
+  margin-bottom: 2rem;
+}
+
+.small-spacing-bottom {
+  margin-bottom: 1rem;
+}
+
+.overflow {
+  overflow-x: scroll;
+}
+
+.title {
+  font-size: 1.75rem;
+}
+
+.card-image {
+  width: 350px;
+  height: 200px;
+}

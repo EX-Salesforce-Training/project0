@@ -1,0 +1,38 @@
+<template>
+  <div class="slds-grid slds-box slds-wrap spacing-bottom">
+    <div class="slds-col small-spacing-bottom slds-size_1-of-1 title">
+      <h1>{title}</h1>
+    </div>
+    <div class="slds-col slds-size_1-of-12">
+      <button onclick={handleLeftClick}>a</button>
+    </div>
+    <div class="slds-col slds-box slds-grid overflow slds-size_10-of-12 container">
+      <template for:each={gamerList} for:item="game">
+        <article key={game.name} class="slds-card slds-size_1-of-4 content-spacing">
+          <div class="slds-card__header slds-grid slds-assistive-text">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                  <a href="#" class="slds-card__header-link slds-truncate" title="Card Header">
+                    <span>Card Header</span>
+                  </a>
+                </h2>
+              </div>
+            </header>
+          </div>
+          <div class="slds-card__body slds-card__body_inner">
+            <img class="card-image" src={game.background_image}>
+          </div>
+          <footer class="slds-card__footer">
+            <a class="slds-card__footer-action" href="#">View All
+              <span class="slds-assistive-text">Accounts</span>
+            </a>
+          </footer>
+        </article>
+      </template>
+    </div>
+    <div class="slds-col slds-size_1-of-12">
+      <button>b</button>
+    </div>
+  </div>
+</template>

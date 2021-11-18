@@ -1,0 +1,23 @@
+<template>
+	<div class="spacing-bottom">
+		<c-navbar></c-navbar>
+	</div>
+
+	<c-carousel></c-carousel>
+	<div class="slds-grid">
+		<div class="slds-col slds-size_1-of-5 spacing-right">
+			<c-sorting-bar></c-sorting-bar>
+		</div>
+		<div class="slds-col">
+			<div class="slds-col">
+				<c-content-block title={gamesTitle} gamer-list={gamesList}></c-content-block>
+			</div>
+			<div class="slds-col">
+				<c-content-block></c-content-block>
+			</div>
+			<div class="slds-col">
+				<c-content-block></c-content-block>
+			</div>
+		</div>
+	</div>
+</template>
