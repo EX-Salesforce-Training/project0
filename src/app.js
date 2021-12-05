@@ -3,9 +3,11 @@ import { LightningElement, track } from "lwc";
 export default class App extends LightningElement {
 
 @track gamesList = [];
-@track showList = []
+@track showList = [];
+@track movieList = []
 gamesTitle = "Video Games";
 showTitle = "TV Shows";
+movieTitle = "Movies";
 
 
 connectedCallback() {
@@ -25,6 +27,18 @@ connectedCallback() {
         for(let show of showList) {
           show.background_image = show.image_thumbnail_path;
         }
+    })
+
+  fetch("https://api.themoviedb.org/3/movie/popular?api_key=bbfbc26ab31c3109f5f0fafb44e88814&language=en-US")
+    .then(result => result.json())
+    .then(data => {
+      this.movieList = data.results;
+      return this.movieList;
+    })
+    .then(movieList => {
+      for(let movie of movieList) {
+        movie.background_image = "https://image.tmdb.org/t/p/original" + movie.poster_path;
+      }
     })
 
 }
